@@ -1,0 +1,87 @@
+################################
+#failure
+
+const proc: main is func
+  begin
+    writeln("hello world");
+  end func;
+
+################################
+
+const proc: main is func
+  local
+    var string: stri is "";
+  begin
+    for stri range argv(PROGRAM) do
+      write(stri <& " ");
+    end for;
+    writeln;
+  end func;
+
+################################
+
+  const proc: main is func
+  local
+    var string: stri is "";
+  begin
+    for stri range argv(PROGRAM) do
+      write(stri <& " ");
+    end for;
+    writeln;
+  end func;
+
+################################
+
+const proc: if (in integer: a) cmp (in integer: b) is
+              lt: (in proc: ltPart)
+              eq: (in proc: eqPart)
+              gt: (in proc: gtPart)
+            end if is func
+  begin
+    if a < b then
+      ltPart;
+    elsif a = b then
+      eqPart;
+    else
+      gtPart;
+    end if;
+  end func;
+
+
+################################
+
+const proc: write (in null_file: aFile, in string: stri) is noop;
+
+const func string: gets (in null_file: inFile, in integer: maxLength) is func
+  result
+    var string: striRead is "";
+  begin
+    if maxLength < 0 then
+      raise RANGE_ERROR;
+    end if;
+  end func;
+
+
+################################
+https://seed7.sourceforge.net/manual/file.htm#Basic_input_and_output_operations
+
+const proc: read (inout aType: aValue) is func
+  begin
+    read(IN, aValue);
+  end func;
+
+const proc: readln (inout aType: aValue) is func
+  begin
+    readln(IN, aValue);
+  end func;
+
+const proc: write (in aType: aValue) is func
+  begin
+    write(OUT, aValue);
+  end func;
+
+const proc: writeln (in aType: aValue) is func
+  begin
+    writeln(OUT, aValue);
+  end func;
+################################
