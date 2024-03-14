@@ -6,6 +6,75 @@ const proc: main is func
     writeln("hello world");
   end func;
 
+error merssage.......
+
+SEED7 COMPILER Version 3.2.1 Copyright (c) 1990-2023 Thomas Mertes
+Source: Main.sd7
+Compiling the program ...
+*** Main.sd7(1):47: ";" expected found "proc"
+const proc: main is func
+----------^
+*** Main.sd7(1):33: Exception raised
+const proc: main is func
+----------^
+*** Main.sd7(1):47: ";" expected found ":"
+const proc: main is func
+-----------^
+*** Main.sd7(1):33: Exception raised
+const proc: main is func
+-----------^
+*** Main.sd7(1):47: ";" expected found "main"
+const proc: main is func
+----------------^
+*** Main.sd7(1):33: Exception raised
+const proc: main is func
+----------------^
+*** Main.sd7(1):47: ";" expected found "is"
+const proc: main is func
+-------------------^
+*** Main.sd7(1):33: Exception raised
+const proc: main is func
+-------------------^
+*** Main.sd7(1):47: ";" expected found "func"
+const proc: main is func
+------------------------^
+*** Main.sd7(1):33: Exception raised
+const proc: main is func
+------------------------^
+*** Main.sd7(2):47: ";" expected found "begin"
+  begin
+-------^
+*** Main.sd7(2):33: Exception raised
+  begin
+-------^
+*** Main.sd7(3):47: ";" expected found "writeln"
+    writeln("hello world");
+-----------^
+*** Main.sd7(3):33: Exception raised
+    writeln("hello world");
+-----------^
+*** Main.sd7(3):48: Undefined type for literal "hello world"
+    writeln("hello world");
+-------------------------^
+*** Main.sd7(3):52: Match for {"hello world" writeln } failed
+    writeln("hello world");
+
+*** Main.sd7(3):33: Exception raised
+    writeln("hello world");
+---------------------------^
+*** Main.sd7(4):47: ";" expected found "func"
+  end func;
+----------^
+*** Main.sd7(4):33: Exception raised
+  end func;
+----------^
+*** Main.sd7(4):33: Exception raised
+  end func;
+-----------^
+*** System declaration for main missing
+21 errors found
+
+
 ################################
 
 const proc: main is func
