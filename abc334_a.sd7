@@ -1,0 +1,17 @@
+$ include "seed7_05.s7i";
+
+const proc: main is func
+  local
+    var integer: b is 0;
+    var integer: g is 0;
+    var string: ans is "";
+  begin
+    read(b);
+    readln(g);
+    if b < g then
+      ans := "Glove";
+    else
+      ans := "Bat";
+    end if;
+    writeln(ans);
+  end func;
