@@ -1,0 +1,9 @@
+$ include "seed7_05.s7i";
+
+const proc: main is func
+  local
+    var integer: N is 0;
+  begin
+    readln(N);
+    writeln(str(N) mult N);
+  end func;
