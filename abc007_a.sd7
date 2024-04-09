@@ -1,0 +1,15 @@
+abc007_a.sd7
+
+
+$ include "seed7_05.s7i";
+
+const proc: main is func
+  local
+    var integer: a is 0;
+    var integer: t is 0;
+  begin
+    read(a);
+    t := (a + 1) div 2;
+    write(t);
+    writeln("");
+  end func;
