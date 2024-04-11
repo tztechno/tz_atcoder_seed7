@@ -1,0 +1,102 @@
+abc102_a.sd7
+######################################
+######################################
+######################################
+######################################
+######################################
+######################################
+######################################
+######################################
+######################################
+######################################
+
+[CE error]
+$ include "seed7_05.s7i";
+const proc: main is func
+  local
+    var integer: n;
+  begin
+    read(n);
+    if n % 2 = 0 then
+      writeln(n);
+    else
+      writeln(n * 2);
+    end if;
+  end func;
+
+---------------------------------------
+SEED7 COMPILER Version 3.2.1 Copyright (c) 1990-2023 Thomas Mertes
+Source: Main.sd7
+Compiling the program ...
+*** Main.sd7(6):47: "is" expected found "begin"
+  begin
+-------^
+*** Main.sd7(8):47: "then" expected found "%"
+    if n % 2 = 0 then
+----------^
+*** Main.sd7(9):30: Expression expected found "writeln"
+      writeln(n);
+-------------^
+*** Main.sd7(9):47: "end" expected found "writeln"
+      writeln(n);
+-------------^
+*** Main.sd7(9):47: "if" expected found "("
+      writeln(n);
+--------------^
+*** Main.sd7(9):47: "begin" expected found "n"
+      writeln(n);
+---------------^
+*** Main.sd7(10):47: "end" expected found "else"
+    else
+--------^
+*** Main.sd7(11):47: "func" expected found "writeln"
+      writeln(n * 2);
+-------------^
+*** Main.sd7(11):47: ";" expected found "("
+      writeln(n * 2);
+--------------^
+*** Main.sd7(7):52: Match for {n read } failed
+    read(n);
+
+*** Main.sd7(5):52: Match for {n } failed
+    var integer: n;
+
+*** Main.sd7(11):52: Match for {n * 2 } failed
+      writeln(n * 2);
+
+*** Main.sd7(11):33: Exception "ILLEGAL_ACTION" raised
+      writeln(n * 2);
+---------------------^
+*** Main.sd7(12):45: Priority <= 49 expected found "end" with priority 127
+    end if;
+-------^
+*** Main.sd7(13):47: "then" expected found "end"
+  end func;
+-----^
+*** Main.sd7(12):4: "END OF FILE" encountered
+  end func;
+----------^
+*** Main.sd7(12):47: "end" expected found "END OF FILE"
+  end func;
+----------^
+*** Main.sd7(12):4: "END OF FILE" encountered
+  end func;
+----------^
+*** Main.sd7(12):47: "if" expected found "END OF FILE"
+  end func;
+----------^
+*** Main.sd7(12):4: "END OF FILE" encountered
+  end func;
+----------^
+*** Main.sd7(12):52: Match for {if ; {func ; } END OF FILE } failed
+  end func;
+
+*** Main.sd7(12):47: ";" expected found "END OF FILE"
+  end func;
+----------^
+*** Main.sd7(12):33: Exception "ILLEGAL_ACTION" raised
+  end func;
+----------^
+23 errors found
+
+######################################
