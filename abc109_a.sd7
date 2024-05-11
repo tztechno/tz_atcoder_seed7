@@ -1,0 +1,43 @@
+abc109_a.sd7
+#############################################
+#############################################
+#############################################
+[AC: remは余りを求める]
+$ include "seed7_05.s7i";  
+const proc: main is func
+  local
+    var integer: a is 0;
+    var integer: b is 0;
+  begin
+    read(a);
+    read(b);
+    if (a*b) rem 2 = 1 then
+        writeln("Yes");    
+    else
+        writeln("No");
+    end if;
+  end func;
+#############################################
+[WA: divは商を求める]
+$ include "seed7_05.s7i";  
+const proc: main is func
+  local
+    var integer: a is 0;
+    var integer: b is 0;
+  begin
+    read(a);
+    read(b);
+    if (a*b) div 2 = 1 then
+        writeln("Yes");    
+    else
+        writeln("No");
+    end if;
+  end func;
+#############################################
+[python]
+a,b=map(int,input().split())
+if (a*b)%2==1 :
+    print('Yes')
+else:
+    print('No')
+#############################################
