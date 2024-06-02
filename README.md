@@ -30,7 +30,7 @@ SEED7 COMPILER Version 3.2.1 Copyright (c) 1990-2023 Thomas Mertes
 ```
 ---
 ```
-
+$ include "seed7_05.s7i";  
 ```
 ---
 ```
