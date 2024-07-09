@@ -1,0 +1,96 @@
+abc115_a.sd7
+##########################################
+##########################################
+##########################################
+##########################################
+##########################################
+##########################################
+##########################################
+##########################################
+##########################################
+##########################################
+$ include "seed7_05.s7i";  
+const proc: main is func
+  local
+    var integer: d is 0;
+    var string: eves is "";
+  begin
+    read(d);
+    if d=22 then
+      writeln("Christmas Eve Eve Eve");
+    elsif d=23 then
+      writeln("Christmas Eve Eve");
+    elsif d=24 then
+      writeln("Christmas Eve");
+    else
+      writeln("Christmas");    
+    end if;
+  end func;
+##########################################
+[error]
+$ include "seed7_05.s7i";
+
+const func string: repeatString(in string: str, in integer: count) is func
+  local
+    var string: result is "";
+    var integer: i is 1;
+  begin
+    while i <= count do
+      result := result & str;
+      i := i + 1;
+    end while;
+    result;
+  end func;
+
+const proc: main is func
+  local
+    var integer: d is 0;
+    var string: eves is "";
+  begin
+    writeln("Enter a number: ");
+    d := read_int();
+    eves := repeatString(" Eve", 25 - d);
+    writeln("Christmas" & eves);
+  end func;
+##########################################
+[error]
+$ include "seed7_05.s7i";
+
+const func string: repeatString(in string: str, in integer: count) is func
+  local
+    var string: result is "";
+    var integer: i is 0;
+  begin
+    for i range 1 to count do
+      result &= str;
+    end for;
+    result;
+  end func;
+
+const proc: main is func
+  local
+    var integer: d is 0;
+    var string: eves is "";
+  begin
+    write("Enter a number: ");
+    readln(d);
+    eves := repeatString(" Eve", 25 - d);
+    writeln("Christmas" & eves);
+  end func;
+##########################################
+[error]
+$ include "seed7_05.s7i";  
+const proc: main is func
+  local
+    var integer: d is 0;
+    var string: eves is "";
+  begin
+    read(d);
+    eves:= repeat(" Eve",25-d);
+    writeln("Christmas "& eves);
+  end func;
+##########################################
+[python]
+D=int(input())
+print("Christmas"+" Eve"*(25-D))
+##########################################
